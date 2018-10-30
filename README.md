@@ -1,2 +1,0 @@
-# getstylizer
-site for Stylizer
