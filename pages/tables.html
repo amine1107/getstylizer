@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tables | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+  <div class="container-full">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="hr-text" data-content="Tables"></h1>
+        <h3 class="text-underline">Introduction</h3>
+        <p>A table is defined using the &lt;table> element, and contains a number of table cells ( &lt;td>, for “table data” ) which are organized into table rows ( &lt;tr>). The markup (HTML code) for a table is always based on rows, never columns.</p>
+        <p>Stylizer offer you a responsive flat table.</p>
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+             <th>Countries</th>
+             <th>Area</th>
+             <th>Population</th>
+             <th>Capital</th>
+             <th>Densite</th>      
+           </tr>
+         </thead>
+         <tbody>
+          <tr>
+            <td>Algeria</td>
+            <td>2 381 741km²</td>
+            <td>41 000 000</td>
+            <td>Algiers</td>
+            <td>16.6</td>
+          </tr>
+          <tr>
+            <td>Morocco</td>
+            <td>446 550km²</td>
+            <td>35 000 000</td>
+            <td>Rabat</td>
+            <td>74.6</td>
+          </tr>
+          <tr>
+            <td>Tunisia</td>
+            <td>163 610km²</td>
+            <td>11 037 225</td>
+            <td>Tunis</td>
+            <td>67,4</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="text-bold">Code :</p>
+      <pre class="code"><code class="language-html">
+&lt;table class="table table-responsive">
+  &lt;thead>
+    &lt;tr>
+     &lt;th>Countries&lt;/th>
+     &lt;th>Area&lt;/th>
+     &lt;th>Population&lt;/th>
+     &lt;th>Capital&lt;/th>
+     &lt;th>Densite&lt;/th>      
+   &lt;/tr>
+  &lt;/thead>
+  &lt;tbody>
+   &lt;tr>
+    &lt;td>Algeria&lt;/td>
+    &lt;td>2 381 741km²&lt;/td>
+    &lt;td>41 000 000&lt;/td>
+    &lt;td>Algiers&lt;/td>
+    &lt;td>16.6&lt;/td>
+  &lt;/tr>  
+  &lt;/tbody>
+&lt;/table>   
+      </code></pre>
+      <h3 class="text-underline">SCSS</h3>
+      <pre class="code"><code class="language-css">
+// ---------------------------------------------------------------
+// This file contains all styles related to the table component.
+// ---------------------------------------------------------------
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: arial;
+  
+}
+
+.table {
+  border-bottom: #d0d5d8 solid 1px;
+  width: 100%;
+  margin-bottom: 20px;
+  th {
+    border-right: #d0d5d8 solid 1px;
+    padding: 20px 30px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+  }
+  td {
+    border-right: #d0d5d8 solid 1px;
+    padding: 20px 30px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  tbody td {
+    font-size: 16px;
+    text-align: center;
+  }
+  thead th {
+    font-weight: normal;
+    background-color: #ecf0f1;
+    color: #333333;
+    font-size: 19px;
+    text-align: center;
+  }
+  tbody > tr:nth-child(odd) > {
+    td, th {
+      background-color: #f8f8f8;
+    }
+  }
+}
+
+/* Making the table responsive */
+
+/* for resolution up to 767px */
+@media (max-width: 767px) {
+  /* Tabela responsiva */
+  .table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+    thead, tbody, th, td, tr {
+      display: block;
+    }
+    td, th {
+      height: 35px;
+    }
+  }
+  /*  Table working as a block  */
+  /* Set a size for the cells */
+  .table {
+    thead th {
+      font-size: 16px;
+    }
+    th, td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+  /* thead is "floated" left to aid in responsiveness */
+  .table-responsive {
+    thead {
+      float: left;
+    }
+    tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      /* scroll horizontal */
+      -webkit-overflow-scrolling: touch;
+      /* Operation for touch devices */
+      white-space: nowrap;
+      tr {
+        display: inline-block;
+      }
+    }
+  }
+  /*  Positioning side-by-side lines  */
+  .table td:last-child {
+    border-right: #d0d5d8 solid 1px;
+  }
+}
+      </code></pre>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/prism.js"></script>
+<script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

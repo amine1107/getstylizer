@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cards | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+   <div class="container-full">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="hr-text" data-content="Cards"></h1>
+          <h3 class="text-underline">Introduction</h3>
+          <p>Cards are surfaces that display content and actions on a single topic.They should be easy to scan for relevant and actionable information. Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.</p>
+        </div>
+        <div class="col-md-7">
+          <h2 class="text-underline">Simple Card</h2>
+          <p class="text-bold">Default Card</p>
+          <div class="card-grid">
+            <div class="card-wrap">
+              <div class="card">
+                <div>
+                  <h2>This is an example</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      <pre class="code"><code class="language-html">
+&lt;div class="card-grid"> 
+ &lt;div class="card-wrap">
+  &lt;div class="card">
+   &lt;div> 
+    &lt;h5>Title&lt;/h5>
+     &lt;!-- Your content should be here -->
+   &lt;/div> 
+  &lt;/div>
+ &lt;/div>
+&lt;/div>             
+        </code></pre>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-underline">Card with image</h2>
+          <div class="card-grid">
+            <div class="card-wrap">
+              <div class="card">
+                <img src="../assets/img/cardImg1.jpg">
+                <div>
+                  <h2>This is an example</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-underline">Another Card with image</h2>
+          <div class="card-grid">
+            <div class="card-wrap">
+              <div class="card">
+                <div>
+                  <h2>This is an example</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+                </div>
+                <img src="../assets/img/cardImg1.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <p class="text-bold">Code :</p>
+         <pre class="code"><code class="language-html">
+&lt;div class="card-grid"> 
+ &lt;div class="card-wrap">
+  &lt;div class="card">
+  &lt;img src="../path/img.jpg">
+   &lt;div> 
+    &lt;h5>Title&lt;/h5>
+     &lt;!-- Your content should be here -->
+   &lt;/div> 
+  &lt;/div>
+ &lt;/div>
+&lt;/div>   
+
+&lt;div class="card-grid"> 
+ &lt;div class="card-wrap">
+  &lt;div class="card">
+   &lt;div> 
+    &lt;h5>Title&lt;/h5>
+     &lt;!-- Your content should be here -->
+   &lt;/div> 
+   &lt;img src="../path/img.jpg">
+  &lt;/div>
+ &lt;/div>
+&lt;/div>           
+        </code></pre> 
+        <h2 class="text-underline">Card with video</h2>
+        <div class="card-grid">
+          <div class="card-wrap">
+            <div class="card">
+              <iframe class="card-video" width="500" height="300" src="https://www.youtube.com/embed/0gCWPvRZcsI" frameborder="0" allowfullscreen=""></iframe>
+              <div>
+                <h5>This is an example</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at efficitur nisl. </p>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    <div class="col-md-12">
+          <p class="text-bold">Code :</p>
+         <pre class="code"><code class="language-html">
+&lt;div class="card-grid"> 
+ &lt;div class="card-wrap">
+  &lt;div class="card">
+  &lt;iframe class="card-video" width="500" height="300" src="../path/video.mp4" frameborder="0" allowfullscreen="">&lt;/iframe>
+   &lt;div> 
+    &lt;h5>Title&lt;/h5>
+     &lt;!-- Your content should be here -->
+   &lt;/div> 
+  &lt;/div>
+ &lt;/div>
+&lt;/div> 
+      </code></pre>  
+      <h3 class="text-underline">SCSS</h3>
+      <pre class="code"><code class="language-css">
+// ---------------------------------------------------------------
+// This file contains all styles related to the card component.
+// ---------------------------------------------------------------
+
+.card-grid {
+  width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.card-wrap {
+  float: left;
+  width: 100%;
+  padding: 5px;
+}
+
+@media (min-width: 500px) {
+  .card-wrap {
+    width: 100%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  > div {
+    padding: 0 1em;
+  }
+}
+
+.card-video, .card-img {
+  width: 100%;
+}        
+      </code></pre>
+        </div>
+      </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/prism.js"></script>
+<script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

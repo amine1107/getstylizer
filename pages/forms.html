@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Forms | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+ <div class="container-full">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="hr-text" data-content="Forms"></h1>
+      <h3 class="text-underline">Introduction</h3>
+      <p>HTML Forms are one of the main points of interaction between a user and a web site or application. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own.</p>
+      <p>Stylizer offers you a responsive Forms that you can use for multiple devices.</p>
+      <p>The form in stylizer use a special grids, you can use it inside a container or beside it.</p>
+      <p>You can see the example in this pen below.</p>
+    </div>
+
+    <div class="col-md-10">
+      <p class="text-bold">Example</p>
+      <p>The form is designed to be responsive inside and beside the container, so it use a special container, row and colmuns.</p>
+      <div class="form-container">
+        <form action="#">
+          <div class="form-row">
+            <div class="form-col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="form-col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="form-col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-col-25">
+              <label for="country">Country</label>
+            </div>
+            <div class="form-col-75">
+              <select id="country" name="country">
+                <option value="algeria">Algeria</option>
+                <option value="france">France</option>
+                <option value="morocco">Morocco</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="form-col-75">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <input class="btn btn-block btn-primary" type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <h3 class="text-underline">Code</h3>
+      <pre class="code"><code class="language-html">
+&lt;div class="form-container">
+  &lt;form action="#">
+    &lt;div class="form-row">
+      &lt;div class="form-col-25">
+        &lt;label for="fname">First Name&lt;/label>
+      &lt;/div>
+      &lt;div class="form-col-75">
+        &lt;input type="text" id="fname" name="firstname" placeholder="Your name..">
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="form-row">
+      &lt;div class="form-col-25">
+        &lt;label for="lname">Last Name&lt;/label>
+    &lt;/div>
+      &lt;div class="form-col-75">
+        &lt;input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="form-row">
+      &lt;div class="form-col-25">
+        &lt;label for="country">Country&lt;/label>
+      &lt;/div>
+      &lt;div class="form-col-75">
+        &lt;select id="country" name="country">
+          &lt;option value="algeria">Algeria&lt;/option>
+          &lt;option value="france">France&lt;/option>
+          &lt;option value="morocco">Morocco&lt;/option>
+        &lt;/select>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="form-row">
+      &lt;div class="form-col-25">
+        &lt;label for="subject">Subject&lt;/label>
+      &lt;/div>
+     &lt;div class="form-col-75">
+        &lt;textarea id="subject" name="subject" placeholder="Write something.." style="height:200px">&lt;/textarea>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="form-row">
+      &lt;input class="btn btn-block btn-primary" type="submit" value="Submit">
+    &lt;/div>
+  &lt;/form>
+&lt;/div>        
+      </code></pre>
+      <h3 class="text-underline">SCSS</h3>
+      <pre class="code"><code class="language-css">
+// ---------------------------------------------------------------
+// This file contains all styles related to the form component.
+// ---------------------------------------------------------------
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input.border-round {
+  border-radius: 8px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.form-container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.form-col-25 {
+  float: left;
+  width: 12%;
+  margin-top: 6px;
+}
+
+.form-col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+
+.form-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .form-col-25, .form-col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+} 
+      </code></pre>
+    </div>
+  </div>
+</div>
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/prism.js"></script>
+<script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

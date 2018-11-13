@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Try It | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <div id="sty" class="sty-default">
+    <input type="checkbox" class="sty-checkbox" id="sty-checkbox"/>
+    <div class="sty-menu sty-menu-right sty-menu-light">
+      <ul class="sty-navigation">
+        <li class="sty-header">
+          <a href="#" class="sty-brand">Stylizer</a>
+          <label class="sty-hamburger sty-hamburger-doublespin" 
+          id="sty-hamburger" for="sty-checkbox"> <span></span> </label>
+        </li>
+        <li class="sty-item"><a href="../index.html">Home</a></li>
+        <li class="sty-item"><a href="install.html">Documentation</a></li>
+      </ul>
+    </div>
+
+    <!-- Lighter WYSIWYG -->
+<div class="container-full">
+  <h1 class="text-center">Try Stylizer Online</h1>
+  <hr>
+  <div class="row">
+    <div class="col-6">
+      <textarea class="iBox mHtml" placeholder="Enter your Html code"></textarea>
+    </div>
+    <div class="col-6">
+      <textarea class="iBox mCss" placeholder="Enter your Css code"></textarea>
+    </div>
+    <div class="col-12">
+      <div class="iBox preview">
+        <iframe id="liveUpdate">
+          <!-- ======= Html Iframe =======-->
+
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta charset="utf-8">
+                                       
+          </head>
+          <body>
+
+          </body>
+          </html>
+
+          <!-- ======= End Html Iframe =======-->
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/prism.js"></script>
+    <script type="text/javascript" src="../assets/js/main.js"></script>
+
+    <script>
+    $(".toggle").on("click", function () {
+      $(".toggle").parent().toggleClass('active');
+    });
+  </script>
+
+  <script type="text/javascript">
+      // Ifram WYSIWYG ------>
+
+      $(function(){
+
+        function fetchHtml(){
+          var html = $(".mHtml").val();
+          return html;
+        }
+
+        function fetchCss(){
+          var css = $(".mCss").val();
+          return css;
+        }
+
+        $(".iBox").on("keyup", function(){
+          var target = $("#liveUpdate")[0].contentWindow.document;
+          target.open();
+          target.close();
+
+          var html = fetchHtml();
+          var css  = fetchCss();
+
+          $("body", target).append(html);
+          $("head", target).append("<link rel='stylesheet' type='text/css' media='screen' href='../assets/css/stylizer.min.css' /><style>" + css + "</style>");
+
+        });
+
+      });
+    </script>
+  </body>
+  </html>

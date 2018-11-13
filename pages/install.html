@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Install | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<!-- Content -->
+<div class="post">
+  <div class="container-full">
+    <div class="row">
+      <div class="col-md-10">
+        <h1>Installation</h1>
+        <hr>
+        <p>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+       You can install Stylizer in multiple ways, but it's as simple as adding a single link tag to your project.</p>
+      </div>
+      <div class="col-md-10">
+        <h3>Install manually.</h3>
+        <p>You need only one file to start your work, the minified file is too light.</p>
+        <button class="btn btn-sm btn-lime"><i class="fas fa-arrow-down"></i> Download</button>
+      </div>
+      <div class="col-md-10">
+        <h3>Using CDN.</h3>
+        <p>Use this CDN on the head section in your file HTML.</p> 
+<pre class="code" data-lang="HTML"><code class="language-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://gitcdn.xyz/repo/amine1107/Stylizer/master/stylizer.min.css&quot;/&gt;
+</code></pre>       
+      </div>
+      <div class="col-md-6">
+        <h3>Using NPM.</h3>
+        <p>You can use Stylizer by download the package published on NPM, NPM is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js.</p>
+<pre class="code" data-lang="BASH"><code>
+npm install stylizercss --save
+</code></pre>  
+      </div>
+      <div class="col-md-6">
+        <h3>Using GIT.</h3>
+        <p>You can use Stylizer by cloning the repo from git. Use Sourcetree, Git from the command line, or any client you like to clone your Git repository. Copy this text on your GIT bash or else.</p>
+<pre class="code" data-lang="BASH"><code>
+git clone https://github.com/amine1107/Stylizer.git
+</code></pre>          
+      </div>
+      <div class="col-md-10">
+        <h1>Running the tests</h1>
+        <hr>
+        <p>After downloading Stylizer, You can simply add it to your file Html. add the following line inside your HTML page's.</p>
+<pre class="code" data-lang="HTML"><code class="language-html">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;!-- The charset attribute specifies the character encoding for the HTML document -->
+    &lt;meta charset="utf-8" /> 
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+    &lt;!-- The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen --> 
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+    &lt;title>Starter Code&lt;/title>
+    &lt;!-- Favicon -->
+    &lt;link rel="icon" href="../favicon.png">
+    &lt;!-- Import the minfied file of Stylizer --> 
+    &lt;link rel="stylesheet" type="text/css" media="screen" href="../css/stylizer.min.css" /> 
+  &lt;/head>
+  &lt;body>
+
+    &lt;!-- Your Content should be Here -->
+    &lt;h1>Hello World!&lt;/h1>
+
+  &lt;/body>
+&lt;/html>    
+</code></pre>        
+      </div>
+      <div class="col-md-11">
+        <h1>Browser Support</h1>
+        <hr>
+        <p>Stylizer created to be compatible with all modern browser, the framework use Autoprefixer, this magic tool uses Browserslist, so you can specify the browsers you want to target in your project with queries like > 5% (see <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>).</p>
+      </div>
+      <div class="col-md-2 text-center">
+        <img class="img-center" src="../assets/img/safari.png">
+        <h3>Safari</h3>
+      </div>
+      <div class="col-md-2 text-center">
+        <img class="img-center" src="../assets/img/edge.png">
+        <h3>Edge</h3>
+      </div>
+      <div class="col-md-2 text-center">
+        <img class="img-center" src="../assets/img/chrome.png">
+        <h3>Chrome</h3>
+      </div>
+      <div class="col-md-2 text-center">
+        <img class="img-center" src="../assets/img/firefox.png">
+        <h3>Firefox</h3>
+      </div>
+      <div class="col-md-2 text-center">
+        <img class="img-center" src="../assets/img/opera.png">
+        <h3>Opera</h3>
+      </div>
+      <div class="col-md-2 text-center">
+        <img class="img-center" src="../assets/img/android.png">
+        <h3>Android</h3>
+      </div>
+      <div class="col-md-12">
+        <hr>
+        <a href="#" class="btn btn-link float-right">Next Step</a>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <script
+ src="https://code.jquery.com/jquery-3.3.1.min.js"
+ integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+ <script src="../assets/js/prism.js"></script>
+ <script src="../assets/js/main.js"></script>
+</body>
+</html>

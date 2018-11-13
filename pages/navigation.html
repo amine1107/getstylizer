@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Grid System | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+  <div class="container-full">
+   <div class="row">
+     <div class="col-md-11">
+       <h1>Navigation</h1>
+       <p>Stylizer offers you a responsive, CSS Only Navigation Bar, inspired by sty Menu.</p>
+       <hr>
+       <div id="sty" class="sty-default">
+    <input type="checkbox" class="sty-checkbox" id="sty-checkbox"/>
+    <div class="sty-menu sty-menu-right sty-menu-light">
+      <ul class="sty-navigation">
+        <li class="sty-header">
+          <a href="#" class="sty-brand">logo</a>
+          <label class="sty-hamburger sty-hamburger-doublespin" 
+          id="sty-hamburger" for="sty-checkbox"> <span></span> </label>
+        </li>
+        <li class="sty-item"><a href="#">item1</a></li>
+        <li class="sty-item"><a href="#">item2</a></li>
+        <li class="sty-item"><a href="#">item3</a></li>
+      </ul>
+    </div>
+  </div>
+<pre class="code"><code class="language-html">
+&lt;div id="sty" class="sty-&lt;name-of-style>"&gt;
+   &lt;input type="checkbox" id="sty-checkbox" class="sty-checkbox">
+   &lt;div class="sty-menu &lt;menu-alignement> sty-menu-dark">
+     &lt;ul class="sty-navigation">
+       &lt;li class="sty-header">
+         &lt;a class="sty-brand" href="#">Brand&lt;/a>
+         &lt;label class="sty-hamburger &lt;hamburger-animation" id="sty-humburger" for"sty-checkbox">&lt;span>&lt;/span>&lt;/label>
+       &lt;li>
+       &lt;li class="sty-item">&lt;a href="#">item&lt;/a>&lt;/li>
+     &lt;/ul>   
+   &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+    <h2>Adding menu items</h2>
+     <p>The base module includes three menu items. You can have more by adding <span class="tagish">&lt;li class="sty-item">&lt;a href="#">Menu item name&lt;/a>&lt;/li></span> to the sty-navigation list. Adding the classname active to the sty-item will make it visually selected. You can have multiple selected items.</p>
+     <h2>Dropdown menu</h2>
+     <p>Adding dropdown menus to your navbar is similar to adding normal items but instead you should use a nested element like this:</p>
+<pre class="code"><code class="language-html">
+&lt;li class="sty-item dropdown">&lt;a href="#">Dropdown Menu&lt;/a>&lt;/li>
+  &lt;ul>
+    &lt;li class="sty-item">&lt;a href="#">Dropdown item1&lt;/a>&lt;/li>
+    &lt;li class="sty-item">&lt;a href="#">Dropdown item2&lt;/a>&lt;/li>
+  &lt;/ul> 
+&lt;/li>       
+</code></pre>  
+     <h2>Style Options</h2>
+     <p>At the moment there are 4 available style options: sty-default, sty-static, sty-fixed, sty-fixed-bottom. To set this you have to change the class name in the base module from &lt;name-of-style> to one of the listed options.</p>   
+     <p class="text-bold">See the example below :</p>
+     <p data-height="265" data-theme-id="0" data-slug-hash="qQZVpr" data-default-tab="html,result" data-user="Amine1992" data-pen-title="Stylizer navigation style options" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/Amine1992/pen/qQZVpr/">Stylizer navigation style options</a> by Amine (<a href="https://codepen.io/Amine1992">@Amine1992</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+     <h2>Color Option</h2>
+     <p>There are 9 colors option see the pen below :</p>
+     <p data-height="265" data-theme-id="0" data-slug-hash="YRqNrE" data-default-tab="html,result" data-user="Amine1992" data-pen-title="Stylizer navigation color" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/Amine1992/pen/YRqNrE/">Stylizer navigation color</a> by Amine (<a href="https://codepen.io/Amine1992">@Amine1992</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+     </div>
+   </div>
+ </div>
+</div>
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/prism.js"></script>
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

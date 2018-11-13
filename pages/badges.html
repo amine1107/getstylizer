@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Badges | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+  <div class="container-full">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="hr-text" data-content="Badges"></h1>
+          <h3 class="text-underline">Introduction</h3>
+          <p>You have probably all seen notification badges somewhere, such as on smart phones or facebook.Badges can be very effective in alerting the user to new things on your site.</p>
+          <p>You can add the class <span class="tagish">.badge</span> to any element you want</p>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-underline">Notification badges</h3>
+              <span class="badge">
+            Notifications
+          </span>
+              <span class="badge" data-badge="8">
+            Notifications
+          </span>
+         <p class="text-bold">Code :</p>
+         <pre class="code"><code class="language-html">
+    &lt;!-- Notification without data -->      
+&lt;span class="badge">Notifications&lt;/span>  
+    &lt;!-- Notification with data -->      
+&lt;span class="badge" data-badge="8">Notifications&lt;/span>          
+         </code></pre>
+        </div>
+        <div class="col-md-12">
+          <h3 class="text-underline">Button badges</h3>
+              <button class="btn badge">Hello</button>
+              <button class="btn badge" data-badge="50">Hello</button>
+         <p class="text-bold">Code :</p>
+         <pre class="code"><code class="language-html">
+    &lt;!-- Button without data -->      
+&lt;button class="btn badge">button&lt;/button>  
+    &lt;!-- Button with data -->      
+&lt;button class="btn badge" data-badge="8">button&lt;/button>          
+         </code></pre>
+         <h3  class="text-underline">SCSS</h3>
+         <pre class="code"><code class="language-css">
+// ---------------------------------------------------------------
+// This file contains all styles related to the Badge component.
+// ---------------------------------------------------------------
+
+.badge {
+  position: relative;
+  white-space: nowrap;
+  &[data-badge]::after, &:not([data-badge])::after {
+    background: #c23616;
+    background-clip: padding-box;
+    border-radius: .5rem;
+    box-shadow: 0 0 0 .1rem #fff;
+    color: #fff;
+    content: attr(data-badge);
+    display: inline-block;
+    transform: translate(-0.05rem, -0.5rem);
+  }
+  &[data-badge]::after {
+    font-size: .7rem;
+    height: .9rem;
+    line-height: 1;
+    min-width: .9rem;
+    padding: .1rem .2rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+  &:not([data-badge])::after, &[data-badge=""]::after {
+    height: 6px;
+    min-width: 6px;
+    padding: 0;
+    width: 6px;
+  }
+  &.btn::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+  }
+}           
+         </code></pre>
+        </div>
+      </div>
+    </div>
+</div>
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/prism.js"></script>
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

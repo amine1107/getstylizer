@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tooltips | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="install.html">Install</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accrordion.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>       
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+  <div class="container-full">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="hr-text" data-content="Tooltips"></h1>
+        <h3 class="text-underline">Introduction</h3>
+        <p>A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element:</p>
+        <button class="btn btn-primary t-top" data-tooltip="Primary">Click here</button>
+        <button class="btn btn-success t-right" data-tooltip="Success">Click Here</button>
+        <button class="btn btn-error t-left" data-tooltip="Error">Click here</button>
+        <button class="btn btn-warning t-bottom" data-tooltip="Warning">Click here</button>
+        <p>You can define a tooltip with just a <span class="tagish">.t-</span> and put the direction of a tooltip.</p>
+        <pre class="code"><code class="language-html">
+&lt;span class="t-top" data-tooltip="Top Tooltip">Text&lt;/span>    
+&lt;span class="t-left" data-tooltip="Left Tooltip">Text&lt;/span> 
+&lt;span class="t-right" data-tooltip="Right Tooltip">Text&lt;/span> 
+&lt;span class="t-bottom" data-tooltip="Bottom Tooltip">Text&lt;/span>       
+        </code></pre>
+        <h3 class="text-underline">Text Tooltip</h3>
+        <p>Tooltips can be on text.</p>
+        <p>Lorem ipsum dolor sit amet, <span class="t-top" data-tooltip="Tooltip" style="color: red;">consectetur</span> adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation <span class="t-bottom" data-tooltip="Another Tooltip" style="color: red;">ullamco</span> laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+        <h3 class="text-underline">Tooltips Size</h3>
+        <p>You can define aa size of a tooltip by put which size you want :</p>
+        <ul>
+          <li>t-xl : width: 200px</li>
+          <li>t-lg : width: 170px</li>
+          <li>t-md : width: 140px</li>
+          <li>t-sm : width: 110px</li>
+          <li>t-xs : width: 80px</li>
+        </ul>
+        <h3 class="text-underline">SCSS</h3>
+         <pre class="code"><code class="language-css">
+// ---------------------------------------------------------------
+// This file contains all styles related to the Tooltip component.
+// ---------------------------------------------------------------
+
+[data-tooltip] {
+  cursor: pointer;
+  position: relative;
+  &:before, &:after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.15s cubic-bezier(0.5, 1, 0.25, 1);
+    z-index: 1;
+  }
+  &:before {
+    padding: 5px;
+    width: 110px;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.2;
+  }
+  &:after {
+    border: 8px solid transparent;
+    width: 0;
+    content: "";
+    font-size: 0;
+    line-height: 0;
+  }
+  &:hover {
+    &:before, &:after {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &.t-xl:before {
+    width: 200px;
+  }
+  &.t-lg:before {
+    width: 170px;
+  }
+  &.t-md:before {
+    width: 140px;
+  }
+  &.t-sm:before {
+    width: 110px;
+  }
+  &.t-xs:before {
+    width: 80px;
+  }
+  &.t-top {
+    &:before {
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 5px;
+      transform: translateX(-50%);
+    }
+    &:after {
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top: 8px solid #000;
+      border-bottom: none;
+    }
+    &:hover {
+      &:before, &:after {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+  }
+  &.t-right {
+    &:before {
+      top: 50%;
+      left: 100%;
+      margin-left: 5px;
+      transform: translateY(-50%);
+    }
+    &:after {
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      border-right: 8px solid #000;
+      border-left: none;
+    }
+    &:hover {
+      &:before, &:after {
+        transform: translateX(5px) translateY(-50%);
+      }
+    }
+  }
+  &.t-bottom {
+    &:before {
+      top: 100%;
+      left: 50%;
+      margin-top: 5px;
+      transform: translateX(-50%);
+    }
+    &:after {
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-bottom: 8px solid #000;
+      border-top: none;
+    }
+    &:hover {
+      &:before, &:after {
+        transform: translateX(-50%) translateY(5px);
+      }
+    }
+  }
+  &.t-left {
+    &:before {
+      top: 50%;
+      right: 100%;
+      margin-right: 5px;
+      transform: translateY(-50%);
+    }
+    &:after {
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      border-left: 8px solid #000;
+      border-right: none;
+    }
+    &:hover {
+      &:before, &:after {
+        transform: translateX(-5px) translateY(-50%);
+      }
+    }
+  }
+}
+          </code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/prism.js"></script>
+<script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

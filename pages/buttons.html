@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Buttons | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+   <div class="container-full">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="hr-text" data-content="Buttons"></h1>
+          <h3 class="text-underline">Introduction</h3>
+          <p>Stylizer offers you a flat customizable modern button, the framework offers you 4 types of buttons :</p>
+          <ul>
+            <li>Default Button.</li>
+            <li>Floating action button.</li>
+            <li>Flat buttons.</li>
+            <li>Link buttons.</li>
+          </ul>
+          <button class="btn">Default</button>
+          <p>You can create a button by using the class <span class="tagish">.btn</span>.</p>
+          <pre class="code"><code class="language-html">
+&lt;button class="btn">Button&lt;/button>            
+          </code></pre>
+          <h2 class="text-underline">Colored Buttons</h2>
+          <p>Stylizer is created to be easy and flat, the framework offers you 17 color.</p>
+          <h3>Basic Color :</h3>
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-success">Success</button>
+          <button class="btn btn-warning">Warning</button>
+          <button class="btn btn-error">Error</button>
+          <p class="text-bold">Code :</p>
+          <pre class="code"><code class="language-html">
+&lt;button class="btn btn-primary">primary&lt;/button>   
+&lt;button class="btn btn-success">success&lt;/button> 
+&lt;button class="btn btn-warning">warning&lt;/button> 
+&lt;button class="btn btn-error">error&lt;/button>          
+          </code></pre>
+          <h3 class="text-underline">Button Color</h3>
+          <button class="btn btn-black">Black</button>
+          <button class="btn btn-grey">Grey</button>
+          <button class="btn btn-white">white</button>
+          <button class="btn btn-teal">Teal</button>
+          <button class="btn btn-indigo">Indigo</button>
+          <button class="btn btn-deepPurple">DeepPurple</button>
+          <button class="btn btn-pink">Pink</button>
+          <button class="btn btn-yellow">Yellow</button>
+          <button class="btn btn-lime">Lime</button>
+          <button class="btn btn-brown">Brown</button>
+          <p class="text-bold">Code :</p>
+          <pre class="code"><code class="language-html">
+&lt;button class="btn btn-black">black&lt;/button>   
+&lt;button class="btn btn-grey">grey&lt;/button> 
+&lt;button class="btn btn-white">white&lt;/button> 
+&lt;button class="btn btn-teal">teal&lt;/button>  
+&lt;button class="btn btn-indigo">indigo&lt;/button>   
+&lt;button class="btn btn-deepPurple">deepPurple&lt;/button> 
+&lt;button class="btn btn-pink">pink&lt;/button> 
+&lt;button class="btn btn-yellow">yellow&lt;/button> 
+&lt;button class="btn btn-lime">lime&lt;/button> 
+&lt;button class="btn btn-brown">brown&lt;/button>          
+          </code></pre>
+          <h2 class="text-underline">Floating action button </h2>
+          <p>Floating action buttons (or FAB) are: “A special case of promoted actions. They are distinguished by a circled icon floating above the UI and have special motion behaviors, related to morphing, launching, and its transferring anchor point.”</p>
+          <p class="text-bold">Example :</p>
+          <button class="btn btn-fab">S</button>
+          <button class="btn btn-fab btn-pink"><i class="fas fa-heart"></i></button>
+          <button class="btn btn-fab btn-primary"><i class="fas fa-spinner fa-pulse"></i></button>
+          <p class="text-bold">Code :</p>
+           <pre class="code"><code class="language-html">
+         &lt;!-- Default fab button -->   
+&lt;button class="btn btn-fab">S&lt;/button>   
+         &lt;!-- Colored fab button --> 
+&lt;button class="btn btn-fab btn-pink">S&lt;/button> 
+         &lt;!-- Icon fab button --> 
+&lt;button class="btn btn-fab">&lt;i class="fas fa-spinner">&lt;/i>&lt;/button>          
+          </code></pre>
+          <h2 class="text-underline">Link Button</h2>
+          <p>The link button in Stylizer are similar to default button, but does not contain a border and background color.</p>
+          <p>You can create a link button by using the class : <span class="tagish">.btn-link</span>.</p>
+          <p class="text-bold">Example :</p>
+          <button class="btn btn-link">Button Link</button>
+          <p class="text-bold">Code :</p>
+          <pre class="code"><code class="language-html">
+&lt;button class="btn btn-link">Link&lt;/button>            
+          </code></pre>
+          <h2 class="text-underline">Flat Button</h2>
+          <p>You can create a flat button by using the class : <span class="tagish">.btn-flat</span>.</p>
+          <p class="text-bold">Example :</p>
+          <button class="btn btn-flat">Button</button>
+          <pre class="code"><code class="language-html">
+&lt;button class="btn btn-flat">button&lt;/button>            
+          </code></pre>
+          <h2 class="text-underline">Button Options</h2>
+          <p>You can customize you button by using simple class.</p>
+          <h3>Button Size</h3>
+          <p>Buttons in Stylizer have 4 size : </p>
+          <button class="btn btn-lg">Large</button>
+          <button class="btn">Normal</button>
+          <button class="btn btn-sm">Small</button>
+          <button class="btn btn-xs">extra small</button><br>
+          <button class="btn btn-fab btn-pink"><i class="fas fa-heart"></i></button>
+          <button class="btn btn-fab-mini btn-pink"><i class="fas fa-heart"></i></button>
+          <p class="text-bold">Code :</p>
+          <pre class="code"><code class="language-html">
+         &lt;!-- Large button -->   
+&lt;button class="btn btn-lg">Button&lt;/button>   
+         &lt;!-- Normal button --> 
+&lt;button class="btn">button&lt;/button>
+         &lt;!-- Small button -->   
+&lt;button class="btn btn-sm">Button&lt;/button>   
+         &lt;!-- extra small button --> 
+&lt;button class="btn btn-xs">button&lt;/button>  
+
+         &lt;!-- Normal fab button -->   
+&lt;button class="btn btn-fab">S&lt;/button>   
+         &lt;!-- Mini fab button --> 
+&lt;button class="btn btn-fab btn-fab-mini">S&lt;/button>         
+          </code></pre>
+          <h2 class="text-underline">Icon Button</h2>
+          <p>you can indicate the position of the icon by using the class : <span class="tagish">.right</span> inside the i tag.</p>
+          <p class="text-bold">Default icon button :</p>
+          <button class="btn btn-indigo"><i class="fas fa-spinner"></i> Button</button>
+          <p class="text-bold">Icon on the right of the button :</p>
+          <button class="btn btn-indigo"><i class="fas fa-spinner right"></i> Button</button>
+          <p class="text-bold">Code :</p>
+          <pre class="code"><code class="language-html">
+         &lt;!-- normal icon button -->   
+&lt;button class="btn btn-success">&lt;i class="fas fa-spinner">&lt;/i> Button&lt;/button>   
+         &lt;!-- Right icon button --> 
+&lt;button class="btn btn-primary">&lt;i class="fas fa-spinner right">&lt;/i> button&lt;/button>
+          </code></pre>
+          <h2 class="text-underline">Disabled Button</h2>
+          <p>You can define the disabled option for the button by using the class <span class="tagish">.disabled</span></p>
+          <button class="btn disabled">Disabled</button>
+          <pre class="code"><code class="language-html">
+&lt;button class="btn disabled">Button&lt;/button>
+           &lt;!-- OR -->
+&lt;button class="btn" disabled>Button&lt;/button>                       
+          </code></pre>
+          <h2>Button Grouped</h2>
+          <div class="button-group">
+            <button class="btn-grp"><i class="fas fa-music"></i></button>
+            <button class="btn-grp"><i class="fas fa-play"></i></button>
+            <button class="btn-grp"><i class="fas fa-volume-up"></i></button>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <p class="text-bold">Code :</p>
+          <pre class="code"><code class="language-html">
+&lt;div class="button-group">
+  &lt;button class="btn-grp">&lt;i class="fab fa-spinner">&lt;/i>&lt;/button> 
+  &lt;button class="btn-grp">&lt;i class="fab fa-spinner">&lt;/i>&lt;/button>
+  &lt;button class="btn-grp">&lt;i class="fab fa-spinner">&lt;/i>&lt;/button>
+&lt;/div>                      
+          </code></pre>
+        </div>
+        <div class="col-md-7">
+          <h2 class="text-underline">Button Block</h2>
+          <p>You can use the block buttons by using the class : <span class="*tagish">.btn-block</span></p>
+          <button class="btn btn-block">Default</button>
+          <button class="btn btn-block btn-lime">Button</button>
+          <p class="text-bold">Code :</p>
+          <pre class="code"><code class="language-html">
+&lt;button class="btn btn-block">Button&lt;/button>            
+          </code></pre>
+        </div>
+      </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/prism.js"></script>
+<script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

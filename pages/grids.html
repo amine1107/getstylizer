@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Grid System | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+     <div class="container-full">
+      <div class="row">
+       <div class="col-md-11">
+         <h1>Grid System</h1>
+         <hr>
+         <p>Stylizer grid system gives you the ability to take advantage of flexbox for laying out a grid while having a reliable inline-block fallback for older browsers.</p>
+         <p>At the time of writing, browser flexbox support is at 96.63% so it's definitely time to forge ahead with flexbox, especially with a reliable inline-block fallback. Where flexbox isn't supported, your basic grid structure will remain intact and most of the layout classes still work. Try this page out in a browser that does not support flexbox (such as Internet Explorer 9) to see for yourself!</p>
+         <h3>Why Stylizer grid system ?.</h3>
+         <ul>
+           <li>Where flexbox is supported, columns are all the same height by default.</li>
+           <li>Stylizer grid cells never push each other out of the way (as with floated grids).</li>
+           <li>Supports semantic elements e.g. you can use ul as a grid.</li>
+           <li>Supports nested grids.</li>
+           <li>Good cross browser support.</li>
+           <li>Easily customizable and extendable.</li>
+         </ul>
+         <h3>Intended use.</h3>
+         <ul>
+           <li>Creating complex nested flexbox grids which take advantage of flexbox layout properties.</li>
+           <li>Using a flexbox layout inside a CSS grid page layout.</li>
+           <li>Generating a flexbox grid with dynamic content of varying height e.g. a list of products.</li>
+           <li>An addition or replacement for your current css layout framework.</li>
+           <li>A set of vendor-prefixed mixins and helper classes to get your flexbox solution off the ground faster.</li>
+         </ul>
+         <h3>Browser Support.</h3>
+         <p>All browser specific implementations of flexbox are supported via vendor prefixes, including the slightly problematic <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/dev-guides/hh673531(v=vs.85)"> IE10 implementation</a> of an early draft of the flexbox specification. Internet Explorer 6 and 7 are explicitly not supported because there are so many issues and quirks that it renders the exercise futile. However, the basic grid still works in those browsers.</p>
+         <h3>Breakpoints in ie8.</h3>
+         <p>If you want to use the grid with breakpoints in ie8 you will need to use <a href="https://github.com/scottjehl/Respond">respond.js</a> which enables media query support in those browsers via JavaScript. There's very little downside to adding this because it's very lightweight and performs well.</p>
+         <h3>HTML5 Element.</h3>
+         <p>If you wish to use html5 elements such as <span class="tagish">section</span> in older browsers such as ie8 and 9, you will need to use <a href="https://github.com/afarkas/html5shiv">html5Shiv</a>. Again, there's very little downside to using this considering the extra peace of mind it gives you when using html5 elements.</p>
+         <h3>ie10 and ie11 grid heights.</h3>
+         <p>ie10 and ie11 have a flexbox rendering bug which means that unless the height of the grid is set with an unit value, flex items will only stretch to be as large as their largest sibling. The grid will still work in these browsers, but it won't entirely fill the height of it's container unless a <span class="tagish">height</span> in units is specified for the grid.</p>
+         <p class="text-info">Please note that <span class="tagish">min-height</span> and percentage heights will not work. The height must be set with <span class="tagish">px</span> <span class="tagish">em</span> or <span class="tagish">vh</span>. There's further reading to be had on the bug itself if you wish to understand it further. You can use a CSS hack for ie10 and ie11 to set a unit height and solve these issues in your grid implementation.</p>
+<pre class="code"><code class="language-css">
+.grid {
+    min-height: 300px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        height: 600px;
+    }
+}
+</code></pre> 
+       
+       <h3>Exemple.</h3>
+<pre class="code"><code class="language-html">
+&lt;div class="row"&gt;
+    &lt;div class="col-6"&gt;
+        &lt;content&gt;
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+        &lt;content&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>                
+       </div>
+     </div>
+     <div class="grid-display">
+       <div class="row">
+         <div class="col-6">
+           <p>some text ...</p>
+         </div>
+         <div class="col-6">
+           <p>some text ...</p>
+         </div>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-md-11">
+        <h2>A closer look.</h2>
+         <h3>Grid parent.</h3>
+         <p class="text-bold">Example : Row</p>
+         <p>This is the top level container element. Any <span class="tagish">.col</span> element that is a direct child of a <span class="tagish">.row</span> is a flex item and their layout can be affected by any modifer classes placed on the parent <span class="tagish">.row</span>.</p>
+         <h3>Column child</h3>
+         <p><span class="text-bold">Example : </span><span class="tagish">.col-10</span> <span class="tagish">.col-md</span> <span class="tagish">.col-auto</span></p>
+         <p>Modifier classes can be applied to the <span class="tagish">.row</span> element to modify the layout of it's direct children elements.</p>
+         <h3>Grid modifier</h3>
+         <p><span class="text-bold">Example : </span><span class="tagish">.align-end</span> <span class="tagish">.no-wrap</span> <span class="tagish">.justify-center</span></p>
+         <p>Modifier classes can be applied to the <span class="tagish">.row</span> element to modify the layout of it's direct children elements.</p>
+         <h2>Semantic markup.</h2>
+         <p>You don't have to use <span class="tagish">div</span> for your grid and ideally you should use the most semantically appropriate markup for your use case with no visible difference.</p>
+         <h3>Divs</h3>
+<pre class="code"><code class="language-html">
+&lt;div class="row"&gt;
+    &lt;div class="col-6"&gt;
+        &lt;content&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>  
+         <h3>Unordered list</h3>
+<pre class="code"><code class="language-html">
+&lt;ul class="row"&gt;
+    &lt;li class="col-6"&gt;
+        &lt;content&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>  
+       <h3>Html5 elements</h3>   
+<pre class="code"><code class="language-html">
+&lt;section class="row"&gt;
+    &lt;article class="col-6"&gt;
+        &lt;content&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+</code></pre> 
+<h2>Numbered columns.</h2>    
+<p>By default Stylizer grid is a 12 column grid but this can be easily changed. Regardless of how many columns you need, you will likely require extra control over the breakpoints at which your grid columns revert to 100% width. To do this you will need to use these modifier classes which determine grid columns at various viewport sizes. A grid built using numbered columns in this way will remain fully intact in the inline-block fallback.</p>  
+<p>The Stylizer grid breakpoints can be easily re-defined but are set to these values by default:</p>   
+<ul>
+  <li>.col- :    does not collapse</li>
+  <li>.col-xs- : collapses below 576px</li>
+  <li>.col-sm :  collapses below 768px</li>
+  <li>.col-md :  collapses below 992px</li>
+  <li>.col-lg :  collapses below 1200px</li>
+  <li>.col-xlg : collapses below 1600px</li>
+</ul>
+</div>
+</div>
+<div class="grid-display">
+ <div class="row">
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-4">
+    <p>col-4</p>
+  </div>
+  <div class="col-xs-4">
+    <p>col-xs-4</p>
+  </div>
+  <div class="col-xs-8">
+    <p>col-xs-8</p>
+  </div>
+  <div class="col-sm-6">
+    <p>col-sm-6</p>
+  </div>
+  <div class="col-sm-6">
+    <p>col-sm-6</p>
+  </div>
+  <div class="col-md-8">
+    <p>col-md-8</p>
+  </div>
+  <div class="col-md-4">
+    <p>col-md-4</p>
+  </div>
+  <div class="col-lg-4">
+    <p>col-lg-4</p>
+  </div>
+  <div class="col-lg-8">
+    <p>col-lg-8</p>
+  </div>
+  <div class="col-xlg-8">
+    <p>col-xlg-8</p>
+  </div>
+  <div class="col-xlg-4">
+    <p>col-xlg-4</p>
+  </div>
+</div>
+</div>
+<div class="row">
+ <div class="col-md-11">
+   <h2>Auto Colmuns</h2>
+   <p>You can add any number of auto sizing <span class="tagish">.col-auto</span> columns to a <span class="tagish">.row</span> and therefore avoid using numbered columns. You can also use the breakpoint sensitive classes such as <span class="tagish">.col-sm-auto</span> to determine when your columns revert to 100% width. A grid built using auto columns will not remain fully intact in the inline-block fallback. For full browser support, you need to use numbered columns.</p>
+ </div>
+</div>
+
+<div class="grid-display">
+  <div class="row">
+    <div class="col-auto">
+    <p>col-auto</p>
+  </div>
+  <div class="col-auto">
+    <p>col-auto</p>
+  </div>
+  <div class="col-sm-auto">
+    <p>col-sm-auto</p>
+  </div>
+  <div class="col-md-auto">
+    <p>col-md-auto</p>
+  </div>
+  <div class="col-lg-auto">
+    <p>col-lg-auto</p>
+  </div>
+  <div class="col-xlg-auto">
+    <p>col-xlg-auto</p>
+  </div>
+</div>
+</div>
+<!-- Container -->
+<div class="row">
+  <div class="col-md-11">
+    <h1>Containers</h1>
+    <hr>
+    <p>A Stylizer grid will fill the full width of it's parent element which means you can drop it into any containing element you may already have in place.</p>
+    <p>However, Stylizer grid has a responsive <span class="tagish">.container</span> class available which uses a combination of margins and padding to maintain layout between elements both inside and outside of the grid. By default this uses the same breakpoints as the numbered columns. However, It is possible to modify the max width and breakpoints of the <span class="tagish">.container</span> class by modifying the included variables.scss file and building a new css file.</p>
+    <h2>Responsive Container</h2>
+<pre class="code"><code class="language-html">
+&lt;div class="container"&gt;
+    &lt;p&gt;This element is inside the container but outside of the row&lt;/p&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-6"&gt;
+            &lt;p&gt;An element inside the row&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6"&gt;
+            &lt;p&gt;Another element inside the row&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>  
+   <h2>Full width container</h2>  
+   <p>If you desire a full width container without a max width but with the same combination of margins and padding to maintain layout between elements both inside and outside of the grid there is also a .container-full class available.</p> 
+<pre class="code"><code class="language-html">
+&lt;div class="container-full"&gt;
+    &lt;p&gt;This element is inside the &lt;em&gt;full width&lt;/em&gt; container but outside of the grid&lt;/p&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-6"&gt;
+            &lt;p&gt;An element inside the row&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6"&gt;
+            &lt;p&gt;Another element inside the row&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  </div>
+</div>
+</div>
+<!-- Row -->
+<div class="container-full">
+  <div class="row">
+    <div class="col-md-11">
+      <h1>Row</h1>
+      <hr>
+      <h2>Nested row.</h2>
+      <p>It's possible to nest rows inside each other. Start a new <span class="tagish">.row</span> inside a <span class="tagish">.col-x</span> element and everything lines up correctly. </p>
+<pre class="code"><code class="language-html">
+&lt;div class="row"&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;content&gt;
+    &lt;/div&gt;
+    &lt;div class="col-sm-6"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-6"&gt;
+                &lt;content&gt;
+            &lt;/div&gt;
+            &lt;div class="col-6"&gt;
+                &lt;content&gt;
+            &lt;/div&gt;
+            &lt;div class="col-6"&gt;
+                &lt;content&gt;
+            &lt;/div&gt;
+            &lt;div class="col-6"&gt;
+                &lt;content&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>      
+    </div>
+  </div>
+  <div class="grid-display">
+    <div class="row">
+      <div class="col-sm-6">
+        <p>col-sm-6</p>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-6">
+            <p>col-6</p>
+          </div>
+          <div class="col-6">
+            <p>col-6</p>
+          </div>
+          <div class="col-6">
+            <p>col-6</p>
+          </div>
+          <div class="col-6">
+            <p>col-6</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h2>Row Wrapping.</h2>
+    <p>By default, the flex-wrap property of a display: flex element is set to nowrap but because this is a grid framework we generally need our grid to wrap so we explcitly set flex-wrap: wrap on our grid element</p>
+    <p class="text-warning">In the inline-block fallback your grid columns will always wrap when they add up to 100% width (12 column by default).</p>
+    <h3>.Default wrap</h3>
+    <p>Grid columns wrap by default.</p>
+  </div>
+</div>
+<div class="grid-display">
+  <div class="row">
+   <div class="col-6">
+    <p>col-6</p>
+  </div>
+  <div class="col-6">
+    <p>col-6</p>
+  </div>
+  <div class="col-10">
+    <p>col-10</p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h3>No wrapp</h3>
+    <p>When applied to grid sets flex-wrap: nowrap and gives you this:</p>
+  </div>
+</div>
+<div class="grid-display">
+  <div class="row no-wrap">
+    <div class="col-6">
+      <p>col-6</p>
+    </div>
+    <div class="col-6">
+      <p>col-6</p>
+    </div>
+    <div class="col-10">
+      <p>col-10</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h3>Wrap reverse</h3>
+    <p>When applied to row sets flex-wrap: wrap-reverse and gives you a row that wraps in reverse:</p>
+  </div>
+</div>
+<div class="grid-display">
+ <div class="row wrap-reverse">
+   <div class="col-6">
+    <p>col-6 (I am first in the markup)</p>
+  </div>
+  <div class="col-6">
+    <p>col-6 (I am second in the markup)</p>
+  </div>
+  <div class="col-10">
+    <p>col-10 (I am third in the markup)</p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h2>Cross axis modifiers</h2>
+    <p>These modifiers can be added to your <span class="tagish">.row</span> element.</p>
+    <h3>Equal height columns by default</h3>
+    <p>In browsers that support flexbox we have equal height columns by default because the default value of <span class="tagish">align-items</span> is stretch</p>
+  </div>
+</div>
+<div class="grid-display">
+  <div class="row">
+    <div class="col-4">
+      <p>First appear years night there the in them rule.</p>
+    </div>
+    <div class="col-4">
+      <p>Over after behold was living together tree is very sixth let bring fish. Forth behold they're fly deep.</p>
+    </div>
+    <div class="col-4">
+      <p>Be can't winged good for also saying first.</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h3>.align-start</h3>
+    <p>When applied to <span class="tagish">.row</span> sets align-items: flex-start and gives you this:</p>
+  </div>
+</div>
+<div class="grid-display">
+ <div class="row align-start">
+  <div class="col-4">
+    <p>First appear years night there the in them rule.</p>
+  </div>
+  <div class="col-4">
+    <p>Over after behold was living together tree is very sixth let bring fish. Forth behold they're fly deep.</p>
+  </div>
+  <div class="col-4">
+    <p>Be can't winged good for also saying first.</p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h3>.align-end</h3>
+    <p>When applied to <span class="tagish">.row</span> sets align-items: flex-end and gives you this:</p>
+  </div>
+</div>
+<div class="grid-display">
+ <div class="row align-end">
+  <div class="col-4">
+    <p>First appear years night there the in them rule.</p>
+  </div>
+  <div class="col-4">
+    <p>Over after behold was living together tree is very sixth let bring fish. Forth behold they're fly deep.</p>
+  </div>
+  <div class="col-4">
+    <p>Be can't winged good for also saying first.</p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h3>.align-center</h3>
+    <p>When applied to <span class="tagish">.row</span> sets align-items: flex-center gives you this:</p>
+  </div>
+</div>
+<div class="grid-display">
+ <div class="row align-center">
+  <div class="col-4">
+    <p>First appear years night there the in them rule.</p>
+  </div>
+  <div class="col-4">
+    <p>Over after behold was living together tree is very sixth let bring fish. Forth behold they're fly deep.</p>
+  </div>
+  <div class="col-4">
+    <p>Be can't winged good for also saying first.</p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-11">
+    <h3>.align-baseline</h3>
+    <p>When applied to <span class="tagish">.row</span> sets align-items: flex-baseline gives you this:</p>
+  </div>
+</div>
+<div class="grid-display">
+ <div class="row align-baseline">
+  <div class="col-4">
+    <h1 class="text-white">Hello !</h1>
+  </div>
+  <div class="col-4">
+    <h2 class="text-white">Mister</h2>
+  </div>
+  <div class="col-4">
+    <h3 class="text-white">Programmer</h3>
+  </div>
+</div>
+</div>
+
+<!-- Colmuns -->
+<div class="container-full">
+  <div class="row">
+    <div class="col-md-11">
+      <h1>Colmuns</h1>
+      <hr>
+      <p>You can override the cross axis alignment of a single <span class="tagish">col-x</span> element by using these modifers.</p>
+      <h3>.align-self-stretch</h3>
+      <p>When applied to <span class="tagish">col-x</span> sets align-self: stretch</p>
+    </div>
+  </div>
+    <div class="grid-display">
+      <div class="row align-start">
+        <div class="col-4">
+          <p>First appear years night there the in them rule that bring fly gathered there is place good.</p>
+        </div>
+        <div class="col-4 align-self-stretch">
+          <p>.align-self-stretch</p>
+        </div>
+        <div class="col-4">
+          <p>First appear years night there the in them rule that bring fly gathered there is place good Created rule image night firmament.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-11">
+        <h3>.align-self-start</h3>
+      <p>When applied to <span class="tagish">col-x</span> sets align-self: flex-start</p>
+      </div>
+    </div>
+    <div class="grid-display">
+        <div class="row">
+            <div class="col-4">
+              <p>First appear years night there the in them rule that bring fly gathered there is place good.</p>
+            </div>
+            <div class="col-4 align-self-start">
+              <p>.align-self-start</p>
+            </div>
+            <div class="col-4">
+              <p>First appear years night there the in them rule that bring fly gathered there is place good Created rule image night firmament.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="col-md-11">
+        <h3>.align-self-end</h3>
+      <p>When applied to <span class="tagish">col-x</span> sets align-self: flex-end</p>
+      </div>
+    </div>
+    <div class="grid-display">
+        <div class="row">
+            <div class="col-4">
+              <p>First appear years night there the in them rule that bring fly gathered there is place good.</p>
+            </div>
+            <div class="col-4 align-self-end">
+              <p>.align-self-start</p>
+            </div>
+            <div class="col-4">
+              <p>First appear years night there the in them rule that bring fly gathered there is place good Created rule image night firmament.</p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+
+ <div class="container-full">
+   <div class="row">
+     <div class="col-md-11">
+       <h2>Cross axis positioning</h2>
+       <p>These modifers set the value of <span class="tagish">align-content</span> which determine the position of your grid elements when there is extra space available in the cross-axis (usually because you've set a height on the grid that is larger than the contents). These modifiers can be added to your <span class="tagish">.row</span> element but also to the <span class="tagish">.col-x</span> elements inside the row.</p>
+       <p class="text-warning">This modifier has no effect when there is only one line of col-x elements in the grid so cannot be used when no-wrap is present on the grid or when you only have a single row of columns</p>
+       <h3>Stretch by default</h3>
+       <p>In browsers that support flexbox we have equal height columns that stretch to fill the available space by default because the default value of <span class="tagish">align-content</span> is stretch</p>
+       <p class="text-bold">See the example</p>
+     </div>
+   </div>
+ </div>
+ </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/prism.js"></script>
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

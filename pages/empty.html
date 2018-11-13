@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Empty State | StylizerCSS Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="../assets/css/prism.css">
+  <link rel="stylesheet" href="../assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
+</style>
+</head>
+
+<body>
+
+ <!-- Sidebar -->
+  <div id="sidebar-toggle">
+    <span id="sidebar-toggle-1"></span>
+    <span id="sidebar-toggle-2"></span>
+    <span id="sidebar-toggle-3"></span>
+  </div>
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <a href=""><img class="img-center" src="../assets/img/logo.png" style="width: 50%;"></a>
+      <h2>Stylizer</h2>
+    </div>
+    <div class="sidebar-nav text-center">
+
+      <a href="../index.html">Home</a>
+      <a href="tio.html">Try it</a>
+      <hr><!-- End of general menu -->
+      <p class="text-bold">Layout</p> <!-- Layout page -->
+      <a href="grids.html">Grid System</a>
+      <a href="grids.html#containers">- Containers</a>
+      <a href="grids.html#row">- Rows</a>
+      <a href="grids.html#colmuns">- Colmuns</a>
+      <a href="navigation.html">Navigation</a>
+      <a href="layout.html#navbar">Footer</a>
+      <p class="text-bold">Compoents</p> <!-- components page -->
+      <a href="accordions.html">Accordion</a>
+      <a href="badges.html">Badges</a>
+      <a href="blockquotes.html">Blockquotes</a>
+      <a href="breadcrumbs.html">Breadcrumb</a>
+      <a href="buttons.html">Buttons</a>
+      <a href="cards.html">Cards</a>
+      <a href="chips.html">Chips</a>
+      <a href="codes.html">Codes</a>
+      <a href="empty.html">Empty</a>
+      <a href="forms.html">Forms</a>
+      <a href="navs.html">Navs</a>
+      <a href="pagination.html">Pagination</a>
+      <a href="panels.html">Panels</a>
+      <a href="progress.html">Progress Bar</a>
+      <a href="steps.html">Steps</a>
+      <a href="tables.html">Tables</a>
+      <a href="tags.html">Tags</a>
+      <a href="tooltips.html">Tooltips</a>
+      <p class="text-bold">Utilities</p> <!-- Utilities page -->
+      <a href="utilities.html#helpers">Helpers</a>
+      <a href="utilities.html#images">Images</a>
+      <a href="utilities.html#lists">Lists</a>
+      <a href="utilities.html#typo">Typography</a>
+       <p class="text-bold">SCSS</p>  
+       <a href="scss.html">SCSS</a>      
+    </div>
+  </div>
+</aside>
+
+<div class="post">
+   <div class="container-full">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="hr-text" data-content="Empty State"></h1>
+          <h3 class="text-underline">Introduction</h3>
+          <p>The goal of a empty state pattern is to provide a good first impression that helps users to achieve their goals. It should be used when a view is empty because no objects exist and you want to guide the user to perform specific actions. </p>
+          <p class="text-bold">Example</p>
+          <div class="empty">
+            <div class="empty-icon">
+              <i class="fas fa-bell fa-5x"></i>
+            </div>
+            <p class="empty-title">You have no new notification yet</p>
+            <p class="empty-subtitle">Click the button to return.</p>
+            <div class="empty-action">
+              <button class="btn btn-primary">return</button>
+            </div>
+          </div>
+          <pre class="code"><code class="language-html">
+&lt;div class="empty">
+  &lt;div class="empty-icon">
+    &lt;!-- Import your icon hre -->
+    &lt;i class="icon">&lt;/i>
+  &lt;/div> &lt;!-- @end icon -->
+  &lt;&lt;!-- you can use here any text you want a paragraph or title -->
+  &lt;p class="empty-title">Hello World&lt;/p>
+  &lt;!-- Short description here --> 
+  &lt;p class="empty-subtitle">. . .&lt;/p>  
+  &lt;!-- You can use here any components you want, Button or input ... -->
+  &lt;div class="empty-action">
+    &lt;button class="btn">Button&lt;/button>
+  &lt;/div>
+&lt;/div> &lt;!-- @end of empty section -->               
+          </code></pre>
+
+          <h3 class="text-underline">SCSS</h3>
+          <pre class="code"><code class="language-css">
+// -----------------------------------------------------------------------------
+// This file contains CSS Empty.
+// -----------------------------------------------------------------------------
+.empty {
+  background: #f7f8f9;
+  border-radius: .1rem;
+  color: #66758c;
+  padding: 3.2rem 1.6rem;
+  text-align: center;
+  width: 100%;
+  .empty-icon {
+    margin-bottom: .8rem;
+  }
+  .empty-title, .empty-subtitle {
+    margin: .4rem auto;
+  }
+  .empty-action {
+    margin-top: .8rem;
+  }
+}
+          </code></pre>
+        </div>
+      </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/prism.js"></script>
+<script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+</html>

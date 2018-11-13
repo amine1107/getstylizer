@@ -1,37 +1,265 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Stylizer | Flexible and Flat css framework</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="assets/img/logos.png">
-  <!-- Place favicon.ico in the root directory -->
-  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>StylizerCSS | Modern CSS framework</title>
+  <meta name="author" content="amine1107">
+  <meta name="description" content="Flexible CSS framework">
+  <meta name="keywords" content="CSS,flexbox,framework,grids">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/vnd.microsoft.icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <!-- Hexa Animation CDN -->
-  <link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/amine1107/Hexa/master/hexa.min.css
-  ">
-  <link rel="stylesheet" href="css/stylizer.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro" type="text/css">
+  <link rel="stylesheet" type="text/css" href="assets/css/Hexa.css">
+  <link rel="stylesheet" href="assets/css/stylizer.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+</style>
 </head>
 
 <body>
 
-  <div class="container text-center">
+  <div class="container-full sectionHome">
+    <div class="topnav">
+      <a href="https://github.com/amine1107/Stylizer"><i class="fab fa-github fa-lg"></i></a>
+      <a href="#news">Learn</a>
+      <a href="pages/tryIt.html">Try It</a>
+    </div>
+    <!-- Showcase -->
     <div class="row">
       <div class="col-md-12 text-center">
-        <img class="img-center hexa flash" src="img/show.png">
-        <h1 class="text-center text-white" id="text-shadow">Site Under Construction</h1>
-        <a class="btn btn-primary" href="https://github.com/amine1107/Stylizer"><i class="fab fa-github"></i> Github</a>
+        <img class="img-center hexa fade" src="assets/img/logo.png">
+        <h1 class="text-white text-big">Stylizer<span class="text-underline">CSS</span></h1>
+        <h1 class="text-white">Simple Modern <span class="text-underline">CSS</span> framework</h1>
+        <button class="btn btn-md btn-primary"><i class="fas fa-arrow-down"></i> Download</button>
+        <a href="pages/install.html" class="btn btn-md btn-pink">Documentation</a><br>
+      </div>
+      <div class="col-md-12 text-center">
+        <button class="btn btn-fab btn-md  scroll-down"><i class="fas fa-arrow-down hexa jump noStop" style="color: #d63031;"></i></button>
       </div>
     </div>
   </div>
 
-</body>
-</html>
+  <div class="container ok">
+    <div class="row">
+
+      <div class="col-md-5">
+        <h1>a modern css framework based on flexbox</h1>
+        <p>Stylizer is a Open-source CSS Framework that make web design flat, is based on the visual aspect, the framework offers you a clean and easy work</p>
+<pre class="code" data-lang="BASH"><code>
+npm install stylizercss
+</code></pre>
+      </div>
+
+      <div class="col-md-7">
+        <img class="img-center" src="assets/img/imac.png">
+      </div>
+
+      <div class="col-md-3 text-center backGrey">
+        <img class="img-center" src="assets/img/pen.png">
+        <h2>Easy to Use</h2>
+        <p>Stylizer is create with semantic class for easy handling</p>
+      </div>
+      <div class="col-md-3 text-center backGrey">
+        <img class="img-center" src="assets/img/layout.png">
+        <h2>Responsive </h2>
+        <p>Stylizer offers you a fluid and responsive layout system</p>
+      </div>
+      <div class="col-md-3 text-center backGrey">
+        <img src="assets/img/material.png">
+        <h2>Material</h2>
+        <p>Stylizer offers you the best experience to create a UI Design</p>
+      </div>
+      <div class="col-md-3 text-center backGrey">
+        <img src="assets/img/opsrv.png">
+        <h2>Open Source</h2>
+        <p>Create, edit and add what you want, Sylizer is totally free</p>
+      </div>
+
+      <div class="col-md-12">
+        <h1 class="hr-text" data-content="Responsive Grids"></h1>
+        <p class="text-center">Stylizer offers you a lightweight responsive flexbox grid with cross browser support, an inline-block fallback and no polyfills.</p>
+        <hr>
+        <div class="grid-display">
+          <div class="row">
+            <div class="col-md-1">
+              <p>
+                one
+              </p>
+            </div>
+            <div class="col-md-11">
+              <p>
+                eleven
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <p>
+                two
+              </p>
+            </div>
+            <div class="col-md-10">
+              <p>
+                ten
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <p>
+                three
+              </p>
+            </div>
+            <div class="col-md-9">
+              <p>
+                nine
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <p>
+                four
+              </p>
+            </div>
+            <div class="col-md-8">
+              <p>
+                eight
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5">
+              <p>
+                five
+              </p>
+            </div>
+            <div class="col-md-7">
+              <p>
+                seven
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                six
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+                six
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>
+                twelve
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="container-full">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="hr-text" data-content="Magic Cards and Panels"></h2>
+          </div>
+          <div class="col-md-6">
+            <div class="card-grid">
+              <div class="card-wrap">
+                <div class="card">
+                  <img src="assets/img/cardImg1.jpg">
+                  <div>
+                    <h3>This is an example</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at efficitur nisl. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel">
+              <div class="panel-header">
+                <div class="panel-title">
+                  <h1>Hey You !</h1></div>
+                  <hr>
+                </div>
+                <div class="panel-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation.</p>
+                  <p class="text-italic">Happy Coding ...</p>
+                </div>
+                <div class="panel-footer">
+                  <hr>
+                  <p>StyliserCSS - 2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 text-center">
+              <h2 class="hr-text" data-content="Flat Material Buttons"></h2>
+              <button class="btn">Default</button>
+              <button class="btn btn-pink">Colored</button>
+              <button class="btn btn-flat ">Button flat</button>
+              <button class="btn btn-link ">Link</button>
+              <button class="btn disabled ">Disabled</button>
+              <button class="btn btn-primary"><i class="fas fa-thumbs-up right"></i> Like</button>
+            </div>
+
+            <div class="col-md-12">
+              <h2 class="hr-text" data-content="Built whith SASS"></h2>
+            </div>
+            <div class="col-md-6 text-left backGrey">
+              <h1>Built with SASS</h1>
+              <p>Stylizer is built with simplified Sass, Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+              <p>Sass is completely compatible with all versions of CSS. We take this compatibility seriously, so that you can seamlessly use any available CSS libraries.</p>
+              <a class="btn btn-link" href="pages/scss.html">Stylizer SCSS</a>
+            </div>
+            <div class="col-md-6">
+              <img class="img-center" src="assets/img/sassLogo.png">
+            </div>
+            <div class="col-md-12">
+              <h2 class="hr-text" data-content="No JavaScript"></h2>
+            </div>
+            <div class="col-md-6">
+              <img class="img-center" src="assets/img/javascript.png">
+            </div>
+            <div class="col-md-6 text-left backGrey">
+              <h1>You don't need Javascript</h1>
+              <p>By using Stylizer, you don't need Javascript or any library to create a responsive website, the framework is created to make some stuff simple and easy.</p>
+            </div>
+            <div class="col-md-12">
+              <h2 class="hr-text" data-content="Learn"></h2>
+            </div>
+            <div class="col-md-7 backGrey text-left">
+              <h1>Learn Stylizer</h1>
+              <p>The Stylizer's team offers you a complete tutoriel to learn how to create a clean responsive website from A to Z.</p>
+              <p>The tutorial is available in medium, you can early try Stylizer online.</p>
+              <button class="btn btn-success">Check Out</button>
+            </div>
+            <div class="col-md-5">
+              <img src="assets/img/tech.png">
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <hr>
+          <h5>Amine1107 | MIT License</h5>
+        </div>
+      </footer><!-- @end footer -->
+
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+      <script src="assets/js/main.js"></script>
+    </body>
+
+    </html>
